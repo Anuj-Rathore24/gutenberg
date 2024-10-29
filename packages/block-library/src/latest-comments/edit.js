@@ -88,6 +88,13 @@ export default function LatestComments( { attributes, setAttributes } ) {
 					// the block appears on the frontend. Setting the locale
 					// explicitly prevents any middleware from setting it to 'user'.
 					urlQueryArgs={ { _locale: 'site' } }
+					/**
+					 * The `key` prop is set to a combination of `backgroundColor` and `textColor` attributes.
+					 * This forces the <ServerSideRender> component to update.
+					 */
+					key={ `${ attributes.backgroundColor || 'default' }-${
+						attributes.textColor || 'default'
+					}` }
 				/>
 			</Disabled>
 		</div>

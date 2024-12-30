@@ -34,14 +34,14 @@ const meta = {
 	argTypes: {
 		classname: {
 			control: 'text',
-			description: 'Title to display in the header.',
+			description: 'Additional CSS class to apply to the list item..',
 			table: {
 				type: { summary: 'string' },
 			},
 		},
 		isFirst: {
 			control: 'boolean',
-			description: 'Text to display at the bottom of the header.',
+			description: 'Indicates whether this is the first item in its row.',
 			table: {
 				type: { summary: 'boolean' },
 			},
@@ -49,7 +49,7 @@ const meta = {
 		item: {
 			control: 'object',
 			description:
-				'Array of actions to display in the header as a row of buttons.',
+				'The block or pattern item to display. Should include properties like `id`, `title`, `icon`, `initialAttributes`, and `innerBlocks`.',
 			table: {
 				type: { summary: 'object' },
 			},
